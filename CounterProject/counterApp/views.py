@@ -52,7 +52,7 @@ def counter(request):
 def result(request):
     text=request.GET['text']
     number_of_words=len(text.split())
-    return render(request,'result.html',{'number':number_of_words})
+    return render(request,'Result.html',{'number':number_of_words})
 def logout(request):
     auth.logout(request)
     return redirect('/')
